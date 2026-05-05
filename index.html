@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NOIR — Fine Dining Experience</title>
-
+<title>NOIR — Fine Dining</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,10 +12,9 @@
 <!-- NAVBAR -->
 <header class="navbar">
   <div class="logo">NOIR</div>
-
   <nav>
+    <a href="#story">Story</a>
     <a href="#menu">Menu</a>
-    <a href="#experience">Experience</a>
     <a href="#locations">Locations</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -24,18 +22,35 @@
 
 <!-- HERO -->
 <section class="hero">
-  <img src="assets/hero.jpg" class="hero-img">
+  <video autoplay muted loop playsinline>
+    <source src="assets/video.mp4" type="video/mp4">
+  </video>
 
-  <div class="hero-overlay">
-    <h1>Elevated Dining</h1>
-    <p>Where taste meets artistry</p>
-    <button class="btn" onclick="scrollToSection('locations')">
+  <div class="overlay">
+    <h1 class="fade">A Study in Taste</h1>
+    <p class="fade delay">Where taste meets artistry</p>
+    <button class="btn fade delay2" onclick="scrollToSection('locations')">
       Reserve a Table
     </button>
   </div>
 </section>
 
-<!-- LOCATION SELECTOR -->
+<!-- STORY -->
+<section id="story" class="section">
+  <div class="split">
+    <div class="text">
+      <h2>Our Philosophy</h2>
+      <p>
+        Cuisine as an art form—refined, intentional, and deeply sensory.
+      </p>
+    </div>
+    <div class="image">
+      <img src="assets/img1.jpg">
+    </div>
+  </div>
+</section>
+
+<!-- LOCATIONS -->
 <section id="locations" class="section dark">
   <h2>Select Your City</h2>
 
@@ -74,16 +89,14 @@
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience" class="section dark">
-  <div class="split">
+<section class="section dark">
+  <div class="split reverse">
     <div class="text">
       <h2>The Experience</h2>
       <p>
-        A curated culinary journey inspired by Middle Eastern elegance
-        and modern gastronomy.
+        A curated culinary journey inspired by elegance and modern gastronomy.
       </p>
     </div>
-
     <div class="image">
       <img src="assets/interior.jpg">
     </div>
@@ -107,11 +120,9 @@
 
     <div>
       <h4>Explore</h4>
-      <ul>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#locations">Locations</a></li>
-      </ul>
+      <a href="#story">Story</a>
+      <a href="#menu">Menu</a>
+      <a href="#locations">Locations</a>
     </div>
 
     <div>
@@ -122,114 +133,6 @@
   </div>
 
   <p class="copy">© 2026 NOIR Restaurant</p>
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>    </form>
-    <span class="close" onclick="closeReserve()">×</span>
-  </div>
-</div>
-
-<!-- NAVBAR -->
-<header class="navbar">
-  <div class="logo">NOIR TABLE</div>
-  <nav>
-    <a href="#story">Story</a>
-    <a href="#menu">Menu</a>
-    <a href="#" onclick="openReserve()">Reserve</a>
-  </nav>
-</header>
-
-<!-- HERO -->
-<section class="hero">
-  <video autoplay muted loop playsinline>
-    <source src="assets/video.mp4" type="video/mp4">
-  </video>
-
-  <div class="overlay">
-    <h1 class="fade">A Study in Taste</h1>
-    <p id="locationText" class="fade delay">Select your location</p>
-    <button class="btn fade delay2" onclick="openReserve()">Reserve Table</button>
-  </div>
-</section>
-
-<!-- STORY -->
-<section id="story" class="section reveal">
-  <div class="container">
-    <div class="text">
-      <h2>Our Philosophy</h2>
-      <p>
-        At Noir Table, cuisine is treated as an art form—refined,
-        intentional, and deeply sensory.
-      </p>
-    </div>
-    <div class="image">
-      <img src="assets/img1.jpg">
-    </div>
-  </div>
-</section>
-
-<section class="section dark reveal">
-  <div class="container reverse">
-    <div class="text">
-      <h2>Craft & Fire</h2>
-      <p>
-        Every element is curated—from ingredient to plating—
-        delivering precision and emotion in every bite.
-      </p>
-    </div>
-    <div class="image">
-      <img src="assets/img2.jpg">
-    </div>
-  </div>
-</section>
-
-<!-- MENU -->
-<section id="menu" class="section reveal">
-  <h2>Signature Dishes</h2>
-
-  <div class="grid">
-    <div class="card">
-      <img src="assets/img3.jpg">
-      <div class="card-overlay">Chef’s Signature</div>
-    </div>
-
-    <div class="card">
-      <img src="assets/img4.jpg">
-      <div class="card-overlay">Premium Grill</div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta reveal">
-  <h2>Reserve Your Experience</h2>
-  <button class="btn" onclick="openReserve()">Book Now</button>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-grid">
-    <div>
-      <h3>Noir Table</h3>
-      <p>Luxury dining redefined.</p>
-    </div>
-
-    <div>
-      <h4>Navigation</h4>
-      <a href="#">Home</a>
-      <a href="#story">Story</a>
-      <a href="#menu">Menu</a>
-    </div>
-
-    <div>
-      <h4>Location</h4>
-      <p id="footerLocation">Not selected</p>
-    </div>
-  </div>
-
-  <p class="copy">© 2026 Noir Table</p>
 </footer>
 
 <script src="script.js"></script>
